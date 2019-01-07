@@ -1,5 +1,5 @@
-"	Neovim config file
-"	JediLuke72
+" Neovim config file
+" JediLuke72
 
 
 " Documentation
@@ -12,19 +12,19 @@
 "
 " === editor shortcuts ===
 "
-" <leader>c<leader>		- > toggle comment of highlighted text
-" :swp								- > strip whitespace
-" :Tabularize /x			- > first highlight lines, then this aligns
-"												> the text based on character x
-" <leader>yw					- > copy word under cursor without moving it
-" <leader>pw					- > replace word under cursor with last copied thing
-" <leader>ymn					- > yank Elixir module name without moving cursor
-" <option/alt>j (k)		- > move whole line, or highlighted lines, up (or down)
+" <leader>c<leader>   - > toggle comment of highlighted text
+" :swp                - > strip whitespace
+" :Tabularize /x      - > first highlight lines, then this aligns
+"                       > the text based on character x
+" <leader>yw          - > copy word under cursor without moving it
+" <leader>pw          - > replace word under cursor with last copied thing
+" <leader>ymn         - > yank Elixir module name without moving cursor
+" <option/alt>j (k)   - > move whole line, or highlighted lines, up (or down)
 "
 " === editor navigating ===
 "
-"	<leader>l						- > find forwards. Then type letter to jump there
-" <leader>f						- > two letter find, same as normal vim f but 2 letter
+" <leader>l           - > find forwards. Then type letter to jump there
+" <leader>f           - > two letter find, same as normal vim f but 2 letter
 "
 " === window management & project navigation ===
 "
@@ -39,65 +39,65 @@
 " <leader> is space bar
 :let mapleader = "\<Space>"
 
-"	plugins
-"	=======
-"	plug.vim - https://github.com/junegunn/vim-plug
+" plugins
+" =======
+" plug.vim - https://github.com/junegunn/vim-plug
 "  :PlugInstall - must run this to install new plugins
 "  :PlugUpdate - update plugins which are already installed
 "  :PlugClean - remove plugins not being used
 call plug#begin('~/.vim/plugged') "install plugins to this dir
-	Plug 'scrooloose/nerdtree'
-	Plug 'scrooloose/nerdcommenter'
-	Plug 'sheerun/vim-polyglot'
-	Plug 'ntpeters/vim-better-whitespace'
-	Plug 'jiangmiao/auto-pairs'
-	Plug 'alvan/vim-closetag'
-	Plug 'easymotion/vim-easymotion'
-	Plug 'kana/vim-submode'
-	Plug 'godlygeek/tabular'
-	" elixir
-	Plug 'elixir-editors/vim-elixir'
-	Plug 'slashmili/alchemist.vim'
-	" git plugins
-	Plug 'airblade/vim-gitgutter'
-	Plug 'tpope/vim-fugitive'
-	Plug 'jreybert/vimagit'
-	" vim-airline
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	" fzf - https://github.com/junegunn/fzf
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	Plug 'junegunn/fzf.vim'
-	" colour schemes
-	Plug 'nightsense/snow'
-	Plug 'TroyFletcher/vim-colors-synthwave'
-	Plug 'crusoexia/vim-monokai'
-	Plug 'jnurmine/Zenburn'
-	Plug 'AlessandroYorba/Sierra'
-	Plug 'jdsimcoe/abstract.vim'
-	Plug 'NLKNguyen/papercolor-theme'
-	Plug 'AlessandroYorba/Arcadia'
-	Plug 'nanotech/jellybeans.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'alvan/vim-closetag'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'kana/vim-submode'
+  Plug 'godlygeek/tabular'
+  " elixir
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'slashmili/alchemist.vim'
+  " git plugins
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'jreybert/vimagit'
+  " vim-airline
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  " fzf - https://github.com/junegunn/fzf
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  " colour schemes
+  Plug 'nightsense/snow'
+  Plug 'TroyFletcher/vim-colors-synthwave'
+  Plug 'crusoexia/vim-monokai'
+  Plug 'jnurmine/Zenburn'
+  Plug 'AlessandroYorba/Sierra'
+  Plug 'jdsimcoe/abstract.vim'
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'AlessandroYorba/Arcadia'
+  Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 
-"	custom functions
-"	================
+" custom functions
+" ================
 "function ResizeVerticalPaneLeft()
-	"" Adjust pane size to the left by 50%
-	"let pane_width = (winwidth(0) * 3/2)
-	"echo "Pane width is: " pane_width
-	"while pane_width > 0
-		""echo "count is " pane_width
-		":exe "normal \<C-w><"
-		"let pane_width -= 1
-	"endwhile
-	"unlet pane_width
+  "" Adjust pane size to the left by 50%
+  "let pane_width = (winwidth(0) * 3/2)
+  "echo "Pane width is: " pane_width
+  "while pane_width > 0
+    ""echo "count is " pane_width
+    ":exe "normal \<C-w><"
+    "let pane_width -= 1
+  "endwhile
+  "unlet pane_width
 "endfunction
 
 
-"	color settings
-"	==============
+" color settings
+" ==============
 " set up colour scheme
 syntax enable
 set background=dark
@@ -109,8 +109,8 @@ set termguicolors
 let g:airline_theme='murmur'
 
 
-"	editor settings
-"	===============
+" editor settings
+" ===============
 set nocompatible
 set tabstop=2
 set shiftwidth=2
@@ -130,12 +130,12 @@ set showmatch
 set noerrorbells
 set nowrap
 " folding
-set foldcolumn=1						" Show the foldcolumn
+set foldcolumn=1            " Show the foldcolumn
 set foldlevel=2
-set foldmethod=indent				" Fold on the syntax
-"set foldclose=all					" Close folds if you leave them in any way
-"set foldnestmax=1					" I only like to fold outer functions
-"set foldopen=all						" Open folds if you touch them in any way
+set foldmethod=indent       " Fold on the syntax
+"set foldclose=all          " Close folds if you leave them in any way
+"set foldnestmax=1          " I only like to fold outer functions
+"set foldopen=all           " Open folds if you touch them in any way
 set autoindent
 set smartindent
 " auto-close HTMl tags
@@ -154,8 +154,8 @@ autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 
-"	key mappings
-"	============
+" key mappings
+" ============
 " clear search highlighting when you press escape
 nnoremap <esc> :noh<return><esc>
 " h -> repeat previous f, t, F or T movement (think 'hop')
@@ -211,8 +211,8 @@ nnoremap <leader>pa A<space><esc>p
 "nnoremap <leader>] :vs<CR><c-w>l
 
 
-"	Window management
-"	=================
+" Window management
+" =================
 " Window movement mappings - use CTRL and my custom arrow key maps to jump
 noremap <c-h> <c-w>h
 noremap <c-l> <c-w>l
@@ -223,22 +223,22 @@ noremap <c-k> <c-w>k
 noremap <leader>= <c-w>=
 
 
-"	vim-submode (plugin)
-"	====================
+" vim-submode (plugin)
+" ====================
 let g:submode_always_show_submode = 1
 " Window mode
 " press <leader>-W, now all normal window commands work with just normal keys.
 call submode#enter_with('Window', 'n', '', '<leader>w')
 for key in ['a','b','c','d','e','f','g','h','i','j','k','l','m',
-			\        'n','o','p','q','r','s','t','u','v','w','x','y','z']
-	" maps lowercase, uppercase and <C-key>
-	call submode#map('Window', 'n', '', key, '<C-w>' . key)
-	call submode#map('Window', 'n', '', toupper(key), '<C-w>' . toupper(key))
-	call submode#map('Window', 'n', '', '<C-' . key . '>', '<C-w>' . '<C-'.key . '>')
+      \        'n','o','p','q','r','s','t','u','v','w','x','y','z']
+  " maps lowercase, uppercase and <C-key>
+  call submode#map('Window', 'n', '', key, '<C-w>' . key)
+  call submode#map('Window', 'n', '', toupper(key), '<C-w>' . toupper(key))
+  call submode#map('Window', 'n', '', '<C-' . key . '>', '<C-w>' . '<C-'.key . '>')
 endfor
 " Go through symbols. Sadly, '|', not supported in submode plugin.
 for key in ['=','_','+','-','<','>']
-	call submode#map('Window', 'n', '', key, '<C-w>' . key)
+  call submode#map('Window', 'n', '', key, '<C-w>' . key)
 endfor
 " Resize faster
 call submode#map('Window', 'n', '', '+', '3<C-w>+')
@@ -252,15 +252,15 @@ call submode#map('Window', 'n', '', '\', ':vertical resize 80<CR>')
 call submode#map('Window', 'n', '', 'q', '<C-w>c')
 
 
-"	fzf (plugin)
-"	============
+" fzf (plugin)
+" ============
 nnoremap \p :Files<cr>
 nnoremap \f :Find<cr>
 command! -bang -nargs=* Find call fzf#vim#grep( 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 
-"	easymotion (plugin)
-"	===================
+" easymotion (plugin)
+" ===================
 " leader-space opens bidirectional 2 letter jump - overwin means jump windows
 " in normal mode
 map <leader>f <Plug>(easymotion-s2)
@@ -278,28 +278,28 @@ let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 let g:EasyMotion_smartcase = 1
 
 
-"	vim-better-whitespace (plugin)
-"	==============================
+" vim-better-whitespace (plugin)
+" ==============================
 let g:strip_whitespace_on_save=1
 let g:strip_whitelines_at_eof=1
 let g:show_spaces_that_precede_tabs=1
 nnoremap :swp :StripWhitespace<cr>
 
 
-"	gitgutter (plugin)
-"	==================
+" gitgutter (plugin)
+" ==================
 " gitgutter updatetime is 0.05s
 set updatetime=50
 " make gitgutter column always there even if no changs
 if exists('&signcolumn')
-	set signcolumn=yes
+  set signcolumn=yes
 else
-	let g:gitgutter_sign_column_always = 1
+  let g:gitgutter_sign_column_always = 1
 endif
 
 
-"	NERDTree (plugin)
-"	=================
+" NERDTree (plugin)
+" =================
 " make NERDTree wider
 let g:NERDTreeWinSize=42
 " open NERDTree automatically when vim starts up on opening a directory
